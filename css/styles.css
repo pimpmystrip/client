@@ -1,0 +1,22 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.led-container {
+    background-color: #CFD8DC;
+}
+
+.led-sim {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    display: inline-block;
+    margin-right: 5px;
+    border: 2px solid #616161;
+}
+
+.btn-dn {
+    font-size: 30px;
+    padding: 50px;
+    border-radius: 0.2em;
+}
