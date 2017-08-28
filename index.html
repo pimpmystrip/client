@@ -73,10 +73,10 @@
                         <div class="col-sm-12 col-md-8 my-auto">
                             <div>
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-2">
                                         <span class="red-text">Red</span>
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-10">
                                         <form class="range-field">
                                             <input id="r-inp" type="range" min="0" max="255" />
                                         </form>
@@ -84,10 +84,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-2">
                                         <span class="green-text">Green</span>
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-10">
                                         <form class="range-field">
                                             <input id="g-inp" type="range" min="0" max="255" />
                                         </form>
@@ -95,10 +95,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-2">
                                         <span class="blue-text">Blue</span>
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-10">
                                         <form class="range-field">
                                             <input id="b-inp" type="range" min="0" max="255" />
                                         </form>
@@ -123,6 +123,33 @@
                         </div>
                     </div>
                     <button class="btn btn-elegant">Apply</button>
+                </div>
+
+                <div class="card-header bg-elegant white-text">
+                    Light Settings
+                </div>
+
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-sm-6 my-auto"><span>LED Animations</span></div>
+                        <div class="col-sm-6">
+                            <div class="dropdown dropup">
+
+                                <!--Trigger-->
+                                <button class="btn btn-unique dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Dropdown primary</button>
+
+
+                                <!--Menu-->
+                                <div class="dropdown-menu dropdown-menu-right dropdown-dark">
+                                    <a class="dropdown-item" href="#">Solid</a>
+                                    <a class="dropdown-item" href="#">Fade</a>
+                                    <a class="dropdown-item" href="#">Strobe</a>
+                                    <a class="dropdown-item" href="#">Breathe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,19 +176,19 @@
                 $('#hex-code').val(hex)
             });
 
-        $('#r-inp').on('input', function() {
+        $('#r-inp').on('input', function () {
             cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
         })
 
-        $('#g-inp').on('input', function() {
+        $('#g-inp').on('input', function () {
             cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
         })
 
-        $('#b-inp').on('input', function() {
+        $('#b-inp').on('input', function () {
             cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
         })
 
-        $('#hex-code').on('input', function() {
+        $('#hex-code').on('input', function () {
             cp.setHex($(this).val().trim());
         })
     </script>

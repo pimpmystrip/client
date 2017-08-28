@@ -40,15 +40,14 @@ body {
 }
 
 #color-palette {
-    height: 250px;
-    width: 250px;
-    background-color: red;
+    height: 230px;
+    width: 230px;
     display: inline-block;
     cursor: crosshair;
 }
 
 #slide {
-    height: 250px;
+    height: 230px;
     width: 40px;
     display: inline-block;
     cursor: row-resize;
