@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="col-11">
                                         <form class="range-field">
-                                            <input class="bg-red" type="range" min="0" max="255" />
+                                            <input id="r-inp" type="range" min="0" max="255" />
                                         </form>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="col-11">
                                         <form class="range-field">
-                                            <input class="bg-red" type="range" min="0" max="255" />
+                                            <input id="g-inp" type="range" min="0" max="255" />
                                         </form>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="col-11">
                                         <form class="range-field">
-                                            <input class="bg-red" type="range" min="0" max="255" />
+                                            <input id="b-inp" type="range" min="0" max="255" />
                                         </form>
                                     </div>
                                 </div>
@@ -142,6 +142,9 @@
             document.getElementById('slide'),
             document.getElementById('color-palette'),
             function (hex, hsv, rgb) {
+                $('#r-inp').val(rgb.r)
+                $('#g-inp').val(rgb.g)
+                $('#b-inp').val(rgb.b)
                 $('.color-display').css({'background-color': hex})
                 $('#hex-code').val(hex)
             });
