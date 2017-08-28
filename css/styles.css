@@ -18,5 +18,14 @@ body {
 .btn-dn {
     font-size: 30px;
     padding: 50px;
-    border-radius: 0.2em;
+    border-radius: 0.2em; 
+    background: #1a2a6c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-dn:hover, .btn-dn:focus, .btn-dn:active, .btn-dn.active {
+    background: #405092;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD547, #CC3939, #405092);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD547, #CC3939, #405092); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
