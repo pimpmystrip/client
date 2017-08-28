@@ -44,12 +44,14 @@ body {
     width: 250px;
     background-color: red;
     display: inline-block;
+    cursor: crosshair;
 }
 
 #slide {
     height: 250px;
     width: 40px;
     display: inline-block;
+    cursor: row-resize;
 }
 
 .color-display {
