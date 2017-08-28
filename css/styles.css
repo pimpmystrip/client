@@ -34,4 +34,22 @@ body {
     height: 250px;
     width: 250px;
     background-color: red;
+    display: inline-block;
+}
+
+#slide {
+    height: 250px;
+    width: 40px;
+    display: inline-block;
+}
+
+.color-display {
+    width: 100px;
+    height: 40px;
+    background-color: red;
+}
+
+#hex-code {
+    width: 100px;
+    text-align: center;
 }

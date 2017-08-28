@@ -70,43 +70,56 @@
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
-                        <div class="col-sm-12 col-md-8">
-                            <div class="row">
-                                <div class="col-1">
-                                    <span class="red-text">Red</span>
+                        <div class="col-sm-12 col-md-8 my-auto">
+                            <div>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <span class="red-text">Red</span>
+                                    </div>
+                                    <div class="col-11">
+                                        <form class="range-field">
+                                            <input class="bg-red" type="range" min="0" max="255" />
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="col-11">
-                                    <form class="range-field">
-                                        <input class="bg-red" type="range" min="0" max="255" />
-                                    </form>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-1">
-                                    <span class="green-text">Green</span>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <span class="green-text">Green</span>
+                                    </div>
+                                    <div class="col-11">
+                                        <form class="range-field">
+                                            <input class="bg-red" type="range" min="0" max="255" />
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="col-11">
-                                    <form class="range-field">
-                                        <input class="bg-red" type="range" min="0" max="255" />
-                                    </form>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-1">
-                                    <span class="blue-text">Blue</span>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <span class="blue-text">Blue</span>
+                                    </div>
+                                    <div class="col-11">
+                                        <form class="range-field">
+                                            <input class="bg-red" type="range" min="0" max="255" />
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="col-11">
-                                    <form class="range-field">
-                                        <input class="bg-red" type="range" min="0" max="255" />
-                                    </form>
+
+                                <div class="row">
+                                    <div class="col-6 pt-4 mb-3" align="center">
+                                        <div class="active-color rounded z-depth-1 color-display"></div>
+                                    </div>
+
+                                    <div class="col-6 pt-4 my-auto" align="center">
+                                        <input type="text" id="hex-code"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-sm-12 col-md-4" align="center">
                             <div id="color-palette" class="z-depth-1 mt-2 mb-3"></div>
+                            <div id="slide" class="z-depth-1"></div>
                         </div>
                     </div>
                     <button class="btn btn-elegant">Apply</button>
@@ -122,6 +135,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
     <script src="http://52.14.34.73:5120/js/mdb.min.js"></script>
+    <script src="js/colorpicker.js"></script>
+
+    <script type="text/javascript">
+        ColorPicker(
+            document.getElementById('slide'),
+            document.getElementById('color-palette'),
+            function (hex, hsv, rgb) {
+                $('.color-display').css({'background-color': hex})
+                $('#hex-code').val(hex)
+            });
+    </script>
 </body>
 
 </html>
