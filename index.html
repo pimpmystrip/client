@@ -111,7 +111,7 @@
                                     </div>
 
                                     <div class="col-6 pt-4 my-auto" align="center">
-                                        <input type="text" id="hex-code"/>
+                                        <input type="text" id="hex-code" />
                                     </div>
                                 </div>
                             </div>
@@ -138,16 +138,32 @@
     <script src="js/colorpicker.js"></script>
 
     <script type="text/javascript">
-        ColorPicker(
+        var cp = ColorPicker(
             document.getElementById('slide'),
             document.getElementById('color-palette'),
             function (hex, hsv, rgb) {
                 $('#r-inp').val(rgb.r)
                 $('#g-inp').val(rgb.g)
                 $('#b-inp').val(rgb.b)
-                $('.color-display').css({'background-color': hex})
+                $('.color-display').css({ 'background-color': hex })
                 $('#hex-code').val(hex)
             });
+
+        $('#r-inp').on('input', function() {
+            cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
+        })
+
+        $('#g-inp').on('input', function() {
+            cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
+        })
+
+        $('#b-inp').on('input', function() {
+            cp.setRgb({ r: $('#r-inp').val(), g: $('#g-inp').val(), b: $('#b-inp').val() });
+        })
+
+        $('#hex-code').on('input', function() {
+            cp.setHex($(this).val().trim());
+        })
     </script>
 </body>
 
