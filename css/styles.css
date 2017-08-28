@@ -1,5 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%);
 }
 
 .led-container {
